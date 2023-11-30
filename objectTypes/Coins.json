@@ -1,0 +1,23 @@
+{
+	"name": "Coins",
+	"plugin-id": "Text",
+	"sid": 762152844096531,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Coins",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 945087918543213
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 255109955700930
+		}
+	],
+	"effectTypes": []
+}

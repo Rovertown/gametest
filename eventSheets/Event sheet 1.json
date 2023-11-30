@@ -1,0 +1,123 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Coins",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 300418563844783
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 268834629949909
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Coins",
+					"sid": 193077372126048,
+					"parameters": {
+						"text": "\"Coins: \" & Coins"
+					}
+				}
+			],
+			"sid": 922002260547782
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 250349584554360,
+					"parameters": {
+						"key": 37
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Player",
+					"sid": 761489144772600,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 835335862928259
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 735748470024938,
+					"parameters": {
+						"key": 39
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Player",
+					"sid": 110425762750796,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 866916844362856
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 981280596510052,
+					"parameters": {
+						"object": "Coin"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Coin",
+					"sid": 338004493175286
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 417946171146864,
+					"parameters": {
+						"variable": "Coins",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Coins",
+					"sid": 200250762303990,
+					"parameters": {
+						"text": "\"Coins: \" & Coins"
+					}
+				}
+			],
+			"sid": 396236041307626
+		}
+	],
+	"sid": 591366519768494
+}
